@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        .butterfly {
+            width: 137px;
+            height: 104px;
+            display: inline-block;
+            background-size: cover;
+            transition: all 1s;
+            background-image : url(b1.png);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="butterfly.js"></script>
+    <script>
+        var butterflies = [...Array(50)].map(function (b) {
+            return new Butterfly("1", Math.random() * 360, Math.random() * 1000, Math.random() * 1000)
+        })
+    </script>
+</body>
+
+</html>
