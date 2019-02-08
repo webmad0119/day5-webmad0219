@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* tagname {
+
+        }
+
+        .class {
+
+        }
+
+        #id {
+
+        } */
+
+        div {
+            border:1px solid black;
+            margin-bottom: 50px;
+            padding: 10px;
+        }
+        .updated {
+            color: green;
+            font-size: 40px;
+        }
+
+        div:nth-child(2) span {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div>p*10>{esto es una prueba} -->
+    <div>
+        <p>esto es una prueba</p>
+        <p>esto es una prueba</p>
+        <p>esto es una prueba</p>
+        <p>esto es una <span>prueba</span</p>
+    </div>
+
+    <div class="recipes">
+        <p>esto es una prueba 2</p>
+        <p>esto es una <span>prueba</span> 2</p>
+        <p>esto es <span>una</span> prueba 2</p>
+        <p>esto es una prueba 2</p>
+    </div>
+    <script>
+        //targeting just one element, please note that the method's name is querySelector (just for one element)
+        //document.querySelector("div:nth-child(2) p:nth-child(3) span").className = "updated"
+
+        var allSpansOfTheSecondDIV = document.querySelectorAll(".recipes:nth-child(2) span")
+
+        for (var i = 0; i < allSpansOfTheSecondDIV.length; i++) {
+            allSpansOfTheSecondDIV[i].style.color = "red"
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
