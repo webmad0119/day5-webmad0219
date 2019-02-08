@@ -36,33 +36,28 @@
 </head>
 
 <body>
-    <!-- div>p*10>{esto es una prueba} -->
-    <div>
-        <p>esto es una prueba</p>
-        <p>esto es una prueba</p>
-        <p>esto es una prueba</p>
-        <p>esto es una <span>prueba</span</p>
-    </div>
-
     <div class="recipes">
         <p>esto es una prueba 2</p>
         <p>esto es una <span>prueba</span> 2</p>
         <p>esto es <span>una</span> prueba 2</p>
         <p>esto es una prueba 2</p>
     </div>
+
+    <button id="testButton">Hide the DIV!!!</button>
     <script>
-        //targeting just one element, please note that the method's name is querySelector (just for one element)
-        //document.querySelector("div:nth-child(2) p:nth-child(3) span").className = "updated"
+        var recipesDIV = document.querySelector(".recipes")
 
-        var allSpansOfTheSecondDIV = document.querySelectorAll(".recipes span")
+        var styleCounter = 0
 
-        for (var i = 0; i < allSpansOfTheSecondDIV.length; i++) {
-            allSpansOfTheSecondDIV[i].style.color = "red"
-            allSpansOfTheSecondDIV[i].setAttribute("class", "prueba")
+        function sofia() {
+            if (styleCounter++ % 2 === 0) {
+                recipesDIV.style.display = "none"
+            }   else {
+                recipesDIV.style.display = "block"
+            }
         }
 
-        
-
+        document.querySelector("#testButton").onclick = sofia
     </script>
 </body>
 

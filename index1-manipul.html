@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: #cccccc;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div id="parentElement">
+        <span id="childElement">foo bar</span>
+    </div> -->
+
+    <div id="parentElement">
+        <span id="childElement">foo bar</span>
+    </div>
+
+    <script>
+        // // Create the new node to insert
+        // var newNode = document.createElement("span");
+
+        // // Get a reference to the parent node
+        // var parentDiv = document.getElementById("childElement").parentNode;
+
+        // // Begin test case [ 1 ] : Exist a childElement --> All working correctly
+        // var sp2 = document.getElementById("childElement");
+        // parentDiv.insertBefore(newNode, sp2);
+
+        var body = document.querySelector("body")
+
+        for (var i = 0; i < 0; i++) {
+            //1 - DOM element creation
+            var newDIV = document.createElement("div")
+            //2 - new DOM element attribution
+            // newDIV.innerHTML = "hola <span>test</span>"
+            // newDIV.style.backgroundColor = "#000"
+            //3 - DOM element insertion
+            body.appendChild(newDIV)
+        }
+
+        //metodo 1
+        // var container = document.getElementById('parentElement');
+        // var pTag = document.getElementById('childElement');
+
+        // container.removeChild(pTag);
+
+        //método 2
+        //document.querySelector("#parentElement #childElement").innerHTML = ""
+
+
+
+
+        var square = document.querySelector("div")
+    </script>
+</body>
+
+</html>

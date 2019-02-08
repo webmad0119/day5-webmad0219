@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        .butterfly {
+            width: 137px;
+            height: 104px;
+            display: inline-block;
+            background-size: cover;
+            transition: all 1s;
+            transform: "rotate(0deg)";
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var nButterflies = 1000
+
+        for (var i = 0; i < nButterflies; i++) {
+            //1. creation
+            var butterfly = document.createElement("div")
+            //2. attributions
+            butterfly.className = "butterfly"
+            butterfly.style.backgroundImage = "url(b" + Math.floor(Math.random() * 3 + 1) + ".png)"
+            butterfly.style.transform = "rotate(" + Math.random() * 360 + "deg)"
+            //3. insertion
+            document.querySelector("body").appendChild(butterfly)
+        }
+
+        setInterval(function () {
+            var allButterflies = document.querySelectorAll("body div")
+            
+            for (var i = 0; i < nButterflies; i++) {
+                allButterflies[i].style.transform = "rotate(" + Math.random() * 360 + "deg)"
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

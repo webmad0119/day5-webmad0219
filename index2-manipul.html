@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1></h1>
+    <h1></h1>
+    <form>
+        <input type="text" id="name" placeholder="enter your name">
+        <button id="clickme">Get the form value</button>
+    </form>
+    <h1></h1>
+
+    <script>
+        function addTextToH1Tag(h1Element) {
+            h1Element.innerHTML = (Math.random()) + ": " + document.querySelector("#name").value
+        }
+        document.querySelector("#name").onkeyup = function (e) {
+            //this prevents the default form behaviour that is to send its data forward to the server
+            // e.preventDefault()
+
+            var allH1 = document.querySelectorAll("h1")
+
+            for (var i = 0; i < allH1.length; i++) {
+                addTextToH1Tag(allH1[i])
+            }
+        }
+    </script>
+</body>
+
+</html>
